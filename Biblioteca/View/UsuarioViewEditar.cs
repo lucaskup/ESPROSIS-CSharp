@@ -54,7 +54,8 @@ namespace Biblioteca.View
         {
             // TODO: This line of code loads data into the 'bibliotecaDataSet.PERFIL' table. You can move, or remove it, as needed.
             this.pERFILTableAdapter.Fill(this.bibliotecaDataSet.PERFIL);
-            txtId.Text = user.id.ToString();
+            if(user.id != 0)
+                txtId.Text = user.id.ToString();
             txtNome.Text = user.nome;
             txtSenha.Text = user.senha;
             txtSobrenome.Text = user.sobrenome;

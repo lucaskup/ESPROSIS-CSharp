@@ -13,7 +13,7 @@ namespace Biblioteca.View
 {
     public partial class PerfilViewEditar : Form
     {
-        private int value;
+
 
         public PerfilViewEditar()
         {
@@ -32,7 +32,7 @@ namespace Biblioteca.View
             txtId.Text = perfil.id.ToString();
             txtNome.Text = perfil.nome;
             txtQtdLivros.Text = perfil.qtLivros.ToString();
-            txtDiasEmprestimo.Text = perfil.valorMulta.ToString();
+            txtValorMulta.Text = perfil.valorMulta.ToString();
             txtDiasEmprestimo.Text = perfil.diasParaEmprestimo.ToString();
 
         }

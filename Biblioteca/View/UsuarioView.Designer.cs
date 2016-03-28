@@ -29,32 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pbVoltar = new System.Windows.Forms.Button();
             this.pbCriar = new System.Windows.Forms.Button();
             this.pbEditar = new System.Windows.Forms.Button();
             this.pbExcluir = new System.Windows.Forms.Button();
             this.gridPerfil = new System.Windows.Forms.DataGridView();
+            this.pERFILBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliotecaDataSet = new Biblioteca.bibliotecaDataSet();
             this.uSUARIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uSUARIOTableAdapter = new Biblioteca.bibliotecaDataSetTableAdapters.USUARIOTableAdapter();
-            this.pERFILBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pERFILTableAdapter = new Biblioteca.bibliotecaDataSetTableAdapters.PERFILTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sobrenomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtNascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fkPerfilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridPerfil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pERFILBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pERFILBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pbVoltar
             // 
-            this.pbVoltar.Location = new System.Drawing.Point(554, 239);
+            this.pbVoltar.Location = new System.Drawing.Point(655, 239);
             this.pbVoltar.Name = "pbVoltar";
             this.pbVoltar.Size = new System.Drawing.Size(101, 23);
             this.pbVoltar.TabIndex = 14;
@@ -64,7 +63,7 @@
             // 
             // pbCriar
             // 
-            this.pbCriar.Location = new System.Drawing.Point(447, 239);
+            this.pbCriar.Location = new System.Drawing.Point(548, 239);
             this.pbCriar.Name = "pbCriar";
             this.pbCriar.Size = new System.Drawing.Size(101, 23);
             this.pbCriar.TabIndex = 13;
@@ -74,7 +73,7 @@
             // 
             // pbEditar
             // 
-            this.pbEditar.Location = new System.Drawing.Point(340, 239);
+            this.pbEditar.Location = new System.Drawing.Point(441, 239);
             this.pbEditar.Name = "pbEditar";
             this.pbEditar.Size = new System.Drawing.Size(101, 23);
             this.pbEditar.TabIndex = 12;
@@ -84,7 +83,7 @@
             // 
             // pbExcluir
             // 
-            this.pbExcluir.Location = new System.Drawing.Point(233, 239);
+            this.pbExcluir.Location = new System.Drawing.Point(334, 239);
             this.pbExcluir.Name = "pbExcluir";
             this.pbExcluir.Size = new System.Drawing.Size(101, 23);
             this.pbExcluir.TabIndex = 11;
@@ -103,14 +102,18 @@
             this.nomeDataGridViewTextBoxColumn,
             this.sobrenomeDataGridViewTextBoxColumn,
             this.dtNascimentoDataGridViewTextBoxColumn,
-            this.fkPerfilDataGridViewTextBoxColumn,
-            this.senhaDataGridViewTextBoxColumn});
+            this.fkPerfilDataGridViewTextBoxColumn});
             this.gridPerfil.DataSource = this.uSUARIOBindingSource;
             this.gridPerfil.Location = new System.Drawing.Point(12, 12);
             this.gridPerfil.Name = "gridPerfil";
             this.gridPerfil.ReadOnly = true;
-            this.gridPerfil.Size = new System.Drawing.Size(643, 221);
+            this.gridPerfil.Size = new System.Drawing.Size(744, 221);
             this.gridPerfil.TabIndex = 10;
+            // 
+            // pERFILBindingSource
+            // 
+            this.pERFILBindingSource.DataMember = "PERFIL";
+            this.pERFILBindingSource.DataSource = this.bibliotecaDataSet;
             // 
             // bibliotecaDataSet
             // 
@@ -125,11 +128,6 @@
             // uSUARIOTableAdapter
             // 
             this.uSUARIOTableAdapter.ClearBeforeFill = true;
-            // 
-            // pERFILBindingSource
-            // 
-            this.pERFILBindingSource.DataMember = "PERFIL";
-            this.pERFILBindingSource.DataSource = this.bibliotecaDataSet;
             // 
             // pERFILTableAdapter
             // 
@@ -148,6 +146,7 @@
             this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
             this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeDataGridViewTextBoxColumn.Width = 200;
             // 
             // sobrenomeDataGridViewTextBoxColumn
             // 
@@ -155,13 +154,14 @@
             this.sobrenomeDataGridViewTextBoxColumn.HeaderText = "sobrenome";
             this.sobrenomeDataGridViewTextBoxColumn.Name = "sobrenomeDataGridViewTextBoxColumn";
             this.sobrenomeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sobrenomeDataGridViewTextBoxColumn.Width = 200;
             // 
             // dtNascimentoDataGridViewTextBoxColumn
             // 
             this.dtNascimentoDataGridViewTextBoxColumn.DataPropertyName = "dtNascimento";
-            dataGridViewCellStyle5.Format = "d";
-            dataGridViewCellStyle5.NullValue = null;
-            this.dtNascimentoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dtNascimentoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtNascimentoDataGridViewTextBoxColumn.HeaderText = "dtNascimento";
             this.dtNascimentoDataGridViewTextBoxColumn.Name = "dtNascimentoDataGridViewTextBoxColumn";
             this.dtNascimentoDataGridViewTextBoxColumn.ReadOnly = true;
@@ -179,18 +179,11 @@
             this.fkPerfilDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.fkPerfilDataGridViewTextBoxColumn.ValueMember = "id";
             // 
-            // senhaDataGridViewTextBoxColumn
-            // 
-            this.senhaDataGridViewTextBoxColumn.DataPropertyName = "senha";
-            this.senhaDataGridViewTextBoxColumn.HeaderText = "senha";
-            this.senhaDataGridViewTextBoxColumn.Name = "senhaDataGridViewTextBoxColumn";
-            this.senhaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // UsuarioView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 279);
+            this.ClientSize = new System.Drawing.Size(764, 279);
             this.Controls.Add(this.pbVoltar);
             this.Controls.Add(this.pbCriar);
             this.Controls.Add(this.pbEditar);
@@ -200,9 +193,9 @@
             this.Text = "UsuarioView";
             this.Load += new System.EventHandler(this.UsuarioView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridPerfil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pERFILBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pERFILBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,6 +217,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sobrenomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtNascimentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn fkPerfilDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn senhaDataGridViewTextBoxColumn;
     }
 }

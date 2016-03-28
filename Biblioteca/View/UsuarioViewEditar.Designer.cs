@@ -43,11 +43,11 @@
             this.dPckDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.cbPerfil = new System.Windows.Forms.ComboBox();
-            this.bibliotecaDataSet = new Biblioteca.bibliotecaDataSet();
             this.pERFILBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliotecaDataSet = new Biblioteca.bibliotecaDataSet();
             this.pERFILTableAdapter = new Biblioteca.bibliotecaDataSetTableAdapters.PERFILTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERFILBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pbSalvar
@@ -139,6 +139,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(266, 20);
             this.txtSenha.TabIndex = 4;
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -178,15 +179,15 @@
             this.cbPerfil.TabIndex = 34;
             this.cbPerfil.ValueMember = "id";
             // 
-            // bibliotecaDataSet
-            // 
-            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
-            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // pERFILBindingSource
             // 
             this.pERFILBindingSource.DataMember = "PERFIL";
             this.pERFILBindingSource.DataSource = this.bibliotecaDataSet;
+            // 
+            // bibliotecaDataSet
+            // 
+            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
+            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pERFILTableAdapter
             // 
@@ -214,8 +215,8 @@
             this.Name = "UsuarioViewEditar";
             this.Text = "UsuarioViewEditar";
             this.Load += new System.EventHandler(this.UsuarioViewEditar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERFILBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
