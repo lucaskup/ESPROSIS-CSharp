@@ -36,6 +36,7 @@
             this.pbLogin = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pbEmprestimo = new System.Windows.Forms.Button();
+            this.pbDevolucao = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // pbAutor
@@ -117,11 +118,22 @@
             this.pbEmprestimo.UseVisualStyleBackColor = true;
             this.pbEmprestimo.Click += new System.EventHandler(this.pbEmprestimo_Click);
             // 
+            // pbDevolucao
+            // 
+            this.pbDevolucao.Location = new System.Drawing.Point(107, 93);
+            this.pbDevolucao.Name = "pbDevolucao";
+            this.pbDevolucao.Size = new System.Drawing.Size(75, 23);
+            this.pbDevolucao.TabIndex = 8;
+            this.pbDevolucao.Text = "&Devolução";
+            this.pbDevolucao.UseVisualStyleBackColor = true;
+            this.pbDevolucao.Click += new System.EventHandler(this.pbDevolucao_Click);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 312);
+            this.Controls.Add(this.pbDevolucao);
             this.Controls.Add(this.pbEmprestimo);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.pbLogin);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.Button pbLogin;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Button pbEmprestimo;
+        private System.Windows.Forms.Button pbDevolucao;
     }
 }

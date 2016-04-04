@@ -60,7 +60,7 @@ namespace Biblioteca.Controller
 
         internal bool limiteEmprestimosAtingido(USUARIO usuario)
         {
-            return usuario.EMPRESTIMO != null && usuario.EMPRESTIMO.Count() >= usuario.PERFIL.qtLivros;
+            return usuario.EMPRESTIMO != null && usuario.EMPRESTIMO.Count(e=>e.dtDevolucao==null) >= usuario.PERFIL.qtLivros;
         }
     }
 }

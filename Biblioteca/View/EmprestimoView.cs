@@ -13,7 +13,8 @@ namespace Biblioteca.View
 {
     public partial class EmprestimoView : Form
     {
-        private ExemplarController c = new ExemplarController();
+        private EmprestimoController emprestimoController = new EmprestimoController();
+        private ExemplarController exemplarController = new ExemplarController();
         private EXEMPLAR exemplarDigitando;
         private USUARIO usuarioLogado;
         
@@ -39,7 +40,7 @@ namespace Biblioteca.View
             // Busca um exemplar com o id digitado
             if (int.TryParse(txtEmprestimo.Text, out id))
             {
-                exemplarDigitando = c.getByID(id);
+                exemplarDigitando = exemplarController.getByID(id);
                 //atualiza label com o titulo do livro
                 if (exemplarDigitando != null)
                     lblNomeLivro.Text = exemplarDigitando.LIVRO.titulo;
@@ -52,7 +53,7 @@ namespace Biblioteca.View
         {
             try
             {
-                c.registrarEmprestimo(exemplarDigitando, usuarioLogado);
+                emprestimoController.registrarEmprestimo(exemplarDigitando, usuarioLogado);
             }
             catch (Exception err)
             {

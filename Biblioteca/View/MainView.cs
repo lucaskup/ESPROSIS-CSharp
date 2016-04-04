@@ -71,5 +71,11 @@ namespace Biblioteca.View
             EmprestimoView vw = new EmprestimoView(usuarioLogado);
             vw.Show();
         }
+
+        private void pbDevolucao_Click(object sender, EventArgs e)
+        {
+            DevolucaoView vw = new DevolucaoView();
+            vw.Show();
+        }
     }
 }

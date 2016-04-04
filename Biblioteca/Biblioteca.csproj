@@ -61,7 +61,9 @@
       <DependentUpon>BibliotecaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controller\AutorController.cs" />
+    <Compile Include="Controller\EmprestimoController.cs" />
     <Compile Include="Controller\ExemplarController.cs" />
+    <Compile Include="Controller\MultaController.cs" />
     <Compile Include="Controller\UsuarioController.cs" />
     <Compile Include="Controller\PerfilController.cs" />
     <Compile Include="Controller\LivroController.cs" />
@@ -122,6 +124,12 @@
     </Compile>
     <Compile Include="USUARIO.cs">
       <DependentUpon>BibliotecaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\DevolucaoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DevolucaoView.Designer.cs">
+      <DependentUpon>DevolucaoView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\EmprestimoView.cs">
       <SubType>Form</SubType>
@@ -204,6 +212,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\DevolucaoView.resx">
+      <DependentUpon>DevolucaoView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\EmprestimoView.resx">
       <DependentUpon>EmprestimoView.cs</DependentUpon>
     </EmbeddedResource>

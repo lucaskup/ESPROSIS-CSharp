@@ -32,6 +32,8 @@
             this.txtEmprestimo = new System.Windows.Forms.TextBox();
             this.pbIncluir = new System.Windows.Forms.Button();
             this.lblNomeLivro = new System.Windows.Forms.Label();
+            this.bibliotecaDataSet = new Biblioteca.bibliotecaDataSet();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -70,6 +72,11 @@
             this.lblNomeLivro.Size = new System.Drawing.Size(0, 13);
             this.lblNomeLivro.TabIndex = 5;
             // 
+            // bibliotecaDataSet
+            // 
+            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
+            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // EmprestimoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,6 +88,7 @@
             this.Controls.Add(this.label1);
             this.Name = "EmprestimoView";
             this.Text = "EmprestimoView";
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,5 +100,6 @@
         private System.Windows.Forms.TextBox txtEmprestimo;
         private System.Windows.Forms.Button pbIncluir;
         private System.Windows.Forms.Label lblNomeLivro;
+        private bibliotecaDataSet bibliotecaDataSet;
     }
 }
