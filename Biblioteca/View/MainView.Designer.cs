@@ -37,6 +37,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pbEmprestimo = new System.Windows.Forms.Button();
             this.pbDevolucao = new System.Windows.Forms.Button();
+            this.pbMulta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // pbAutor
@@ -51,7 +52,7 @@
             // 
             // pbLivro
             // 
-            this.pbLivro.Location = new System.Drawing.Point(94, 13);
+            this.pbLivro.Location = new System.Drawing.Point(94, 12);
             this.pbLivro.Name = "pbLivro";
             this.pbLivro.Size = new System.Drawing.Size(75, 23);
             this.pbLivro.TabIndex = 1;
@@ -61,7 +62,7 @@
             // 
             // pbExemplar
             // 
-            this.pbExemplar.Location = new System.Drawing.Point(176, 13);
+            this.pbExemplar.Location = new System.Drawing.Point(176, 12);
             this.pbExemplar.Name = "pbExemplar";
             this.pbExemplar.Size = new System.Drawing.Size(75, 23);
             this.pbExemplar.TabIndex = 2;
@@ -71,7 +72,7 @@
             // 
             // pbPerfil
             // 
-            this.pbPerfil.Location = new System.Drawing.Point(258, 12);
+            this.pbPerfil.Location = new System.Drawing.Point(257, 12);
             this.pbPerfil.Name = "pbPerfil";
             this.pbPerfil.Size = new System.Drawing.Size(75, 23);
             this.pbPerfil.TabIndex = 3;
@@ -81,7 +82,7 @@
             // 
             // pbUsuario
             // 
-            this.pbUsuario.Location = new System.Drawing.Point(340, 12);
+            this.pbUsuario.Location = new System.Drawing.Point(338, 12);
             this.pbUsuario.Name = "pbUsuario";
             this.pbUsuario.Size = new System.Drawing.Size(75, 23);
             this.pbUsuario.TabIndex = 4;
@@ -91,7 +92,7 @@
             // 
             // pbLogin
             // 
-            this.pbLogin.Location = new System.Drawing.Point(12, 54);
+            this.pbLogin.Location = new System.Drawing.Point(12, 41);
             this.pbLogin.Name = "pbLogin";
             this.pbLogin.Size = new System.Drawing.Size(75, 23);
             this.pbLogin.TabIndex = 5;
@@ -102,7 +103,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(456, 21);
+            this.lblUsuario.Location = new System.Drawing.Point(111, 46);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(85, 13);
             this.lblUsuario.TabIndex = 6;
@@ -110,7 +111,7 @@
             // 
             // pbEmprestimo
             // 
-            this.pbEmprestimo.Location = new System.Drawing.Point(12, 94);
+            this.pbEmprestimo.Location = new System.Drawing.Point(12, 70);
             this.pbEmprestimo.Name = "pbEmprestimo";
             this.pbEmprestimo.Size = new System.Drawing.Size(75, 23);
             this.pbEmprestimo.TabIndex = 7;
@@ -120,7 +121,7 @@
             // 
             // pbDevolucao
             // 
-            this.pbDevolucao.Location = new System.Drawing.Point(107, 93);
+            this.pbDevolucao.Location = new System.Drawing.Point(94, 70);
             this.pbDevolucao.Name = "pbDevolucao";
             this.pbDevolucao.Size = new System.Drawing.Size(75, 23);
             this.pbDevolucao.TabIndex = 8;
@@ -128,11 +129,22 @@
             this.pbDevolucao.UseVisualStyleBackColor = true;
             this.pbDevolucao.Click += new System.EventHandler(this.pbDevolucao_Click);
             // 
+            // pbMulta
+            // 
+            this.pbMulta.Location = new System.Drawing.Point(176, 70);
+            this.pbMulta.Name = "pbMulta";
+            this.pbMulta.Size = new System.Drawing.Size(75, 23);
+            this.pbMulta.TabIndex = 9;
+            this.pbMulta.Text = "Multa";
+            this.pbMulta.UseVisualStyleBackColor = true;
+            this.pbMulta.Click += new System.EventHandler(this.pbMulta_Click);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 312);
+            this.ClientSize = new System.Drawing.Size(422, 103);
+            this.Controls.Add(this.pbMulta);
             this.Controls.Add(this.pbDevolucao);
             this.Controls.Add(this.pbEmprestimo);
             this.Controls.Add(this.lblUsuario);
@@ -160,5 +172,6 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Button pbEmprestimo;
         private System.Windows.Forms.Button pbDevolucao;
+        private System.Windows.Forms.Button pbMulta;
     }
 }

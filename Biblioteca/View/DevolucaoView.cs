@@ -52,6 +52,11 @@ namespace Biblioteca.View
         }
         private void atualizarTela()
         {
+            // TODO: This line of code loads data into the 'bibliotecaDataSet.MULTA' table. You can move, or remove it, as needed.
+            this.mULTATableAdapter.Fill(this.bibliotecaDataSet.MULTA);
+            // TODO: This line of code loads data into the 'bibliotecaDataSet.USUARIO' table. You can move, or remove it, as needed.
+            this.uSUARIOTableAdapter.Fill(this.bibliotecaDataSet.USUARIO);
+            // TODO: This line of code loads data into the 'bibliotecaDataSet.EMPRESTIMO' table. You can move, or remove it, as needed.
             this.eMPRESTIMOTableAdapter.Fill(this.bibliotecaDataSet.EMPRESTIMO);
         }
     }

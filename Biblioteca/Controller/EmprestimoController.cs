@@ -31,21 +31,39 @@ namespace Biblioteca.Controller
         {
 
             UsuarioController c = new UsuarioController();
+
+            if(usuario == null)
+            {
+                throw new UsuarioNaoLogadoException("Usuário não está logado no sistema.");
+            }
+                
             //recarrega dados do usuário
             usuario = c.getByID(usuario.id);
 
             if (exemplarDigitando.tipo == TipoExemplar.ConsultaInterna)
+            {
                 throw new ConsultaInternaException("Exemplar apenas para consulta interna.");
+            }
             if (exemplarEmprestado(exemplarDigitando))
+            {
                 throw new ExemplarEmprestadoException("Exemplar emprestado");
+            }
             if (possuiReserva(exemplarDigitando, usuario))
+            {
                 throw new LivroComReservaException("Livro com reserva.");
+            }
             if (c.limiteEmprestimosAtingido(usuario))
+            {
                 throw new MaximoEmprestimosException("Usuário excedeu limite de empréstimos");
+            }
             if (c.possuiAtrasos(usuario))
+            {
                 throw new PossuiAtrasosException("Usuário possui atrasos.");
+            }
             if (c.possuiMulta(usuario))
+            {
                 throw new PossuiMultaException("Usuário possui multas em aberto.");
+            }
             return true;
         }
 
@@ -120,6 +138,26 @@ namespace Biblioteca.Controller
 
         }
     }
+    [Serializable]
+    internal class UsuarioNaoLogadoException : Exception
+    {
+        public UsuarioNaoLogadoException()
+        {
+        }
+
+        public UsuarioNaoLogadoException(string message) : base(message)
+        {
+        }
+
+        public UsuarioNaoLogadoException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+
+        protected UsuarioNaoLogadoException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
+        }
+    }
+
     [Serializable]
     internal class ExemplarEmprestadoException : Exception
     {

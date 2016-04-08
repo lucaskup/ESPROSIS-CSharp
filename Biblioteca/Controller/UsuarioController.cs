@@ -48,7 +48,7 @@ namespace Biblioteca.Controller
         internal bool possuiAtrasos(USUARIO usuario)
         {
             return usuario.EMPRESTIMO.Any(emp => emp.dtPrazoDevolucao < DateTime.Now.Date 
-                                                                & emp.dtDevolucao != null);
+                                                                & emp.dtDevolucao == null);
         }
 
         internal bool possuiMulta(USUARIO usuario)

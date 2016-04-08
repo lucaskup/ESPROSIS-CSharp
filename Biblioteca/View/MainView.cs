@@ -77,5 +77,11 @@ namespace Biblioteca.View
             DevolucaoView vw = new DevolucaoView();
             vw.Show();
         }
+
+        private void pbMulta_Click(object sender, EventArgs e)
+        {
+            MultaView vw = new MultaView();
+            vw.Show();
+        }
     }
 }

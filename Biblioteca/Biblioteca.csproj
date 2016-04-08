@@ -173,6 +173,18 @@
     <Compile Include="View\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\MultaObservacaoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MultaObservacaoView.Designer.cs">
+      <DependentUpon>MultaObservacaoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MultaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MultaView.Designer.cs">
+      <DependentUpon>MultaView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\PerfilView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +247,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MultaObservacaoView.resx">
+      <DependentUpon>MultaObservacaoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MultaView.resx">
+      <DependentUpon>MultaView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PerfilView.resx">
       <DependentUpon>PerfilView.cs</DependentUpon>
