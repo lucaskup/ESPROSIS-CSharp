@@ -34,35 +34,39 @@ namespace Biblioteca.Controller
 
             if(usuario == null)
             {
-                throw new UsuarioNaoLogadoException("Usuário não está logado no sistema.");
+                throw new EmprestimoFalhouException("Usuário não está logado no sistema.");
             }
                 
             //recarrega dados do usuário
             usuario = c.getByID(usuario.id);
 
+            if(exemplarDigitando == null)
+            {
+                throw new EmprestimoFalhouException("Exemplar inválido");
+            }
             if (exemplarDigitando.tipo == TipoExemplar.ConsultaInterna)
             {
-                throw new ConsultaInternaException("Exemplar apenas para consulta interna.");
+                throw new EmprestimoFalhouException("Exemplar apenas para consulta interna.");
             }
             if (exemplarEmprestado(exemplarDigitando))
             {
-                throw new ExemplarEmprestadoException("Exemplar emprestado");
+                throw new EmprestimoFalhouException("Exemplar emprestado");
             }
             if (possuiReserva(exemplarDigitando, usuario))
             {
-                throw new LivroComReservaException("Livro com reserva.");
+                throw new EmprestimoFalhouException("Livro com reserva.");
             }
             if (c.limiteEmprestimosAtingido(usuario))
             {
-                throw new MaximoEmprestimosException("Usuário excedeu limite de empréstimos");
+                throw new EmprestimoFalhouException("Usuário excedeu limite de empréstimos");
             }
             if (c.possuiAtrasos(usuario))
             {
-                throw new PossuiAtrasosException("Usuário possui atrasos.");
+                throw new EmprestimoFalhouException("Usuário possui atrasos.");
             }
             if (c.possuiMulta(usuario))
             {
-                throw new PossuiMultaException("Usuário possui multas em aberto.");
+                throw new EmprestimoFalhouException("Usuário possui multas em aberto.");
             }
             return true;
         }
@@ -122,8 +126,10 @@ namespace Biblioteca.Controller
 
         internal void devolver(EMPRESTIMO emprestimo)
         {
+            if (emprestimo == null)
+                throw new DevolucaoFalhouException("Exemplar não está emprestado");
             emprestimo.dtDevolucao = DateTime.Now.Date;
-            
+            //Se está devolvendo depois do prazo de devolução deve gerar multa
             if (emprestimo.dtDevolucao > emprestimo.dtPrazoDevolucao)
             {
                 MULTA m = new MULTA();
@@ -138,143 +144,43 @@ namespace Biblioteca.Controller
 
         }
     }
+
     [Serializable]
-    internal class UsuarioNaoLogadoException : Exception
+    internal class DevolucaoFalhouException : Exception
     {
-        public UsuarioNaoLogadoException()
+        public DevolucaoFalhouException()
         {
         }
 
-        public UsuarioNaoLogadoException(string message) : base(message)
+        public DevolucaoFalhouException(string message) : base(message)
         {
         }
 
-        public UsuarioNaoLogadoException(string message, Exception innerException) : base(message, innerException)
+        public DevolucaoFalhouException(string message, Exception innerException) : base(message, innerException)
         {
         }
 
-        protected UsuarioNaoLogadoException(SerializationInfo info, StreamingContext context) : base(info, context)
+        protected DevolucaoFalhouException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
     }
 
     [Serializable]
-    internal class ExemplarEmprestadoException : Exception
+    internal class EmprestimoFalhouException : Exception
     {
-        public ExemplarEmprestadoException()
+        public EmprestimoFalhouException()
         {
         }
 
-        public ExemplarEmprestadoException(string message) : base(message)
+        public EmprestimoFalhouException(string message) : base(message)
         {
         }
 
-        public ExemplarEmprestadoException(string message, Exception innerException) : base(message, innerException)
+        public EmprestimoFalhouException(string message, Exception innerException) : base(message, innerException)
         {
         }
 
-        protected ExemplarEmprestadoException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
-    }
-
-    [Serializable]
-    internal class PossuiMultaException : Exception
-    {
-        public PossuiMultaException()
-        {
-        }
-
-        public PossuiMultaException(string message) : base(message)
-        {
-        }
-
-        public PossuiMultaException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected PossuiMultaException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
-    }
-
-    [Serializable]
-    internal class PossuiAtrasosException : Exception
-    {
-        public PossuiAtrasosException()
-        {
-        }
-
-        public PossuiAtrasosException(string message) : base(message)
-        {
-        }
-
-        public PossuiAtrasosException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected PossuiAtrasosException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
-    }
-
-    [Serializable]
-    internal class MaximoEmprestimosException : Exception
-    {
-        public MaximoEmprestimosException()
-        {
-        }
-
-        public MaximoEmprestimosException(string message) : base(message)
-        {
-        }
-
-        public MaximoEmprestimosException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected MaximoEmprestimosException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
-    }
-
-    [Serializable]
-    internal class LivroComReservaException : Exception
-    {
-        public LivroComReservaException()
-        {
-        }
-
-        public LivroComReservaException(string message) : base(message)
-        {
-        }
-
-        public LivroComReservaException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected LivroComReservaException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
-    }
-
-    [Serializable]
-    internal class ConsultaInternaException : Exception
-    {
-        public ConsultaInternaException()
-        {
-
-        }
-
-        public ConsultaInternaException(string message) : base(message)
-        {
-        }
-
-        public ConsultaInternaException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected ConsultaInternaException(SerializationInfo info, StreamingContext context) : base(info, context)
+        protected EmprestimoFalhouException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
     }

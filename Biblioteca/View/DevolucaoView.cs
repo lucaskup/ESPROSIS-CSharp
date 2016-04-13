@@ -21,7 +21,15 @@ namespace Biblioteca.View
 
         private void pbConfirmar_Click(object sender, EventArgs e)
         {
-            c.devolver(emprestimo);
+            try
+            {
+                c.devolver(emprestimo);
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            
             atualizarTela();
      
         }
