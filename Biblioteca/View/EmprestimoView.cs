@@ -54,6 +54,7 @@ namespace Biblioteca.View
             try
             {
                 emprestimoController.registrarEmprestimo(exemplarDigitando, usuarioLogado);
+                MessageBox.Show("Empréstimo efetuado com sucesso");
             }
             catch (Exception err)
             {

@@ -36,7 +36,9 @@ namespace Biblioteca.View
 
         private void txtExemplar_TextChanged(object sender, EventArgs e)
         {
-            emprestimo = c.getEmprestimo(int.Parse(txtExemplar.Text));
+            int idExemplar = 0;
+            int.TryParse(txtExemplar.Text, out idExemplar);
+            emprestimo = c.getEmprestimo(idExemplar);
             if(emprestimo != null)
             {
                 lblExemplar.Text = "Data empréstimo: " + emprestimo.dtEmprestimo.ToShortDateString() + " Livro " + emprestimo.EXEMPLAR.LIVRO.titulo;

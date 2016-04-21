@@ -54,7 +54,7 @@ namespace Biblioteca.Controller
         internal bool possuiMulta(USUARIO usuario)
         {
             return (from e in usuario.EMPRESTIMO
-                    where e.MULTA != null && !e.MULTA.abonado
+                    where e.MULTA != null 
                     select e).Any();
         }
 

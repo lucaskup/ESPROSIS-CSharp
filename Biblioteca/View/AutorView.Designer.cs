@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gridAutor = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aUTORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliotecaDataSet = new Biblioteca.bibliotecaDataSet();
             this.aUTORTableAdapter = new Biblioteca.bibliotecaDataSetTableAdapters.AUTORTableAdapter();
@@ -39,6 +37,8 @@
             this.pbEditar = new System.Windows.Forms.Button();
             this.pbCriar = new System.Windows.Forms.Button();
             this.pbVoltar = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridAutor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTORBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
@@ -48,7 +48,11 @@
             // 
             this.gridAutor.AllowUserToAddRows = false;
             this.gridAutor.AllowUserToDeleteRows = false;
+            this.gridAutor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridAutor.AutoGenerateColumns = false;
+            this.gridAutor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridAutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridAutor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -60,21 +64,6 @@
             this.gridAutor.Size = new System.Drawing.Size(455, 221);
             this.gridAutor.TabIndex = 0;
             this.gridAutor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAutor_CellContentClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeDataGridViewTextBoxColumn.Width = 300;
             // 
             // aUTORBindingSource
             // 
@@ -92,6 +81,7 @@
             // 
             // pbExcluir
             // 
+            this.pbExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbExcluir.Location = new System.Drawing.Point(45, 239);
             this.pbExcluir.Name = "pbExcluir";
             this.pbExcluir.Size = new System.Drawing.Size(101, 23);
@@ -102,6 +92,7 @@
             // 
             // pbEditar
             // 
+            this.pbEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbEditar.Location = new System.Drawing.Point(152, 239);
             this.pbEditar.Name = "pbEditar";
             this.pbEditar.Size = new System.Drawing.Size(101, 23);
@@ -112,6 +103,7 @@
             // 
             // pbCriar
             // 
+            this.pbCriar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbCriar.Location = new System.Drawing.Point(259, 239);
             this.pbCriar.Name = "pbCriar";
             this.pbCriar.Size = new System.Drawing.Size(101, 23);
@@ -122,6 +114,7 @@
             // 
             // pbVoltar
             // 
+            this.pbVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbVoltar.Location = new System.Drawing.Point(366, 239);
             this.pbVoltar.Name = "pbVoltar";
             this.pbVoltar.Size = new System.Drawing.Size(101, 23);
@@ -129,6 +122,21 @@
             this.pbVoltar.Text = "&Voltar";
             this.pbVoltar.UseVisualStyleBackColor = true;
             this.pbVoltar.Click += new System.EventHandler(this.pbVoltar_Click);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // AutorView
             // 
@@ -156,11 +164,11 @@
         private bibliotecaDataSet bibliotecaDataSet;
         private System.Windows.Forms.BindingSource aUTORBindingSource;
         private bibliotecaDataSetTableAdapters.AUTORTableAdapter aUTORTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button pbExcluir;
         private System.Windows.Forms.Button pbEditar;
         private System.Windows.Forms.Button pbCriar;
         private System.Windows.Forms.Button pbVoltar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
     }
 }
