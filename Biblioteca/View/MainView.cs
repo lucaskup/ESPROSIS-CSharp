@@ -176,6 +176,12 @@ namespace Biblioteca.View
             this.Cursor = Cursors.Arrow;
         }
 
+
         #endregion
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
