@@ -56,6 +56,10 @@ namespace Biblioteca.View
             livroControl.persist(livro);
             this.Close();
         }
-    
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

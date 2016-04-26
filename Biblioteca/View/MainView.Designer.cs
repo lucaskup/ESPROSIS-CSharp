@@ -36,11 +36,11 @@
             this.pbLogin = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pbDevolucao = new System.Windows.Forms.Button();
             this.pbMulta = new System.Windows.Forms.Button();
             this.pbUsuario = new System.Windows.Forms.Button();
             this.pbEmprestimo = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -110,7 +110,7 @@
             this.pbPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbPerfil.FlatAppearance.BorderSize = 0;
             this.pbPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pbPerfil.Location = new System.Drawing.Point(322, 27);
+            this.pbPerfil.Location = new System.Drawing.Point(315, 25);
             this.pbPerfil.Name = "pbPerfil";
             this.pbPerfil.Size = new System.Drawing.Size(89, 84);
             this.pbPerfil.TabIndex = 3;
@@ -145,17 +145,6 @@
             this.lblUsuario.Size = new System.Drawing.Size(135, 22);
             this.lblUsuario.TabIndex = 6;
             this.lblUsuario.Text = "Usuário Logado:";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
-            this.panel1.Controls.Add(this.pbLogin);
-            this.panel1.Controls.Add(this.lblUsuario);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(457, 76);
-            this.panel1.TabIndex = 10;
             // 
             // pbDevolucao
             // 
@@ -195,7 +184,7 @@
             this.pbUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbUsuario.FlatAppearance.BorderSize = 0;
             this.pbUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pbUsuario.Location = new System.Drawing.Point(322, 25);
+            this.pbUsuario.Location = new System.Drawing.Point(315, 25);
             this.pbUsuario.Name = "pbUsuario";
             this.pbUsuario.Size = new System.Drawing.Size(89, 84);
             this.pbUsuario.TabIndex = 4;
@@ -220,6 +209,17 @@
             this.pbEmprestimo.Click += new System.EventHandler(this.pbEmprestimo_Click);
             this.pbEmprestimo.MouseEnter += new System.EventHandler(this.pbEmprestimo_MouseEnter);
             this.pbEmprestimo.MouseLeave += new System.EventHandler(this.pbEmprestimo_MouseLeave);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
+            this.panel1.Controls.Add(this.pbLogin);
+            this.panel1.Controls.Add(this.lblUsuario);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(457, 76);
+            this.panel1.TabIndex = 10;
             // 
             // label1
             // 
@@ -262,7 +262,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.label4.Location = new System.Drawing.Point(342, 122);
+            this.label4.Location = new System.Drawing.Point(335, 122);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 22);
@@ -273,10 +273,10 @@
             // 
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.pbPerfil);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pbEmprestimo);
-            this.groupBox1.Controls.Add(this.pbUsuario);
             this.groupBox1.Controls.Add(this.pbMulta);
             this.groupBox1.Controls.Add(this.pbDevolucao);
             this.groupBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,11 +291,11 @@
             // 
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.pbPerfil);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.pbAutor);
             this.groupBox2.Controls.Add(this.pbExemplar);
             this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.pbUsuario);
             this.groupBox2.Controls.Add(this.pbLivro);
             this.groupBox2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(14, 265);
@@ -310,7 +310,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.label5.Location = new System.Drawing.Point(335, 119);
+            this.label5.Location = new System.Drawing.Point(328, 119);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 22);
@@ -364,6 +364,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "MainView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainView";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

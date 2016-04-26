@@ -24,5 +24,22 @@ namespace Biblioteca.View
             u = c.login(txtLogin.Text, txtSenha.Text);
             this.Close();
         }
+
+        private void lblLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pbVoltar = new System.Windows.Forms.Button();
             this.pbCriar = new System.Windows.Forms.Button();
             this.pbEditar = new System.Windows.Forms.Button();
@@ -49,49 +52,69 @@
             // 
             // pbVoltar
             // 
-            this.pbVoltar.Location = new System.Drawing.Point(554, 239);
+            this.pbVoltar.BackColor = System.Drawing.SystemColors.Control;
+            this.pbVoltar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pbVoltar.Location = new System.Drawing.Point(682, 239);
             this.pbVoltar.Name = "pbVoltar";
-            this.pbVoltar.Size = new System.Drawing.Size(101, 23);
+            this.pbVoltar.Size = new System.Drawing.Size(101, 28);
             this.pbVoltar.TabIndex = 9;
             this.pbVoltar.Text = "&Voltar";
-            this.pbVoltar.UseVisualStyleBackColor = true;
+            this.pbVoltar.UseVisualStyleBackColor = false;
             this.pbVoltar.Click += new System.EventHandler(this.pbVoltar_Click);
             // 
             // pbCriar
             // 
-            this.pbCriar.Location = new System.Drawing.Point(447, 239);
+            this.pbCriar.BackColor = System.Drawing.SystemColors.Control;
+            this.pbCriar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pbCriar.Location = new System.Drawing.Point(575, 239);
             this.pbCriar.Name = "pbCriar";
-            this.pbCriar.Size = new System.Drawing.Size(101, 23);
+            this.pbCriar.Size = new System.Drawing.Size(101, 28);
             this.pbCriar.TabIndex = 8;
             this.pbCriar.Text = "&Criar";
-            this.pbCriar.UseVisualStyleBackColor = true;
+            this.pbCriar.UseVisualStyleBackColor = false;
             this.pbCriar.Click += new System.EventHandler(this.pbCriar_Click);
             // 
             // pbEditar
             // 
-            this.pbEditar.Location = new System.Drawing.Point(340, 239);
+            this.pbEditar.BackColor = System.Drawing.SystemColors.Control;
+            this.pbEditar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pbEditar.Location = new System.Drawing.Point(468, 239);
             this.pbEditar.Name = "pbEditar";
-            this.pbEditar.Size = new System.Drawing.Size(101, 23);
+            this.pbEditar.Size = new System.Drawing.Size(101, 28);
             this.pbEditar.TabIndex = 7;
             this.pbEditar.Text = "&Editar";
-            this.pbEditar.UseVisualStyleBackColor = true;
+            this.pbEditar.UseVisualStyleBackColor = false;
             this.pbEditar.Click += new System.EventHandler(this.pbEditar_Click);
             // 
             // pbExcluir
             // 
-            this.pbExcluir.Location = new System.Drawing.Point(233, 239);
+            this.pbExcluir.BackColor = System.Drawing.SystemColors.Control;
+            this.pbExcluir.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pbExcluir.Location = new System.Drawing.Point(361, 239);
             this.pbExcluir.Name = "pbExcluir";
-            this.pbExcluir.Size = new System.Drawing.Size(101, 23);
+            this.pbExcluir.Size = new System.Drawing.Size(101, 28);
             this.pbExcluir.TabIndex = 6;
             this.pbExcluir.Text = "Exclui&r";
-            this.pbExcluir.UseVisualStyleBackColor = true;
+            this.pbExcluir.UseVisualStyleBackColor = false;
             this.pbExcluir.Click += new System.EventHandler(this.pbExcluir_Click);
             // 
             // gridPerfil
             // 
             this.gridPerfil.AllowUserToAddRows = false;
             this.gridPerfil.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(255)))), ((int)(((byte)(249)))));
+            this.gridPerfil.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gridPerfil.AutoGenerateColumns = false;
+            this.gridPerfil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridPerfil.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPerfil.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gridPerfil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridPerfil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -100,10 +123,19 @@
             this.diasParaEmprestimoDataGridViewTextBoxColumn,
             this.valorMultaDataGridViewTextBoxColumn});
             this.gridPerfil.DataSource = this.pERFILBindingSource;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridPerfil.DefaultCellStyle = dataGridViewCellStyle6;
             this.gridPerfil.Location = new System.Drawing.Point(12, 12);
             this.gridPerfil.Name = "gridPerfil";
             this.gridPerfil.ReadOnly = true;
-            this.gridPerfil.Size = new System.Drawing.Size(643, 221);
+            this.gridPerfil.RowTemplate.Height = 30;
+            this.gridPerfil.Size = new System.Drawing.Size(770, 221);
             this.gridPerfil.TabIndex = 5;
             // 
             // idDataGridViewTextBoxColumn
@@ -120,7 +152,6 @@
             this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
             this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeDataGridViewTextBoxColumn.Width = 200;
             // 
             // qtLivrosDataGridViewTextBoxColumn
             // 
@@ -161,13 +192,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 273);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(794, 273);
             this.Controls.Add(this.pbVoltar);
             this.Controls.Add(this.pbCriar);
             this.Controls.Add(this.pbEditar);
             this.Controls.Add(this.pbExcluir);
             this.Controls.Add(this.gridPerfil);
             this.Name = "PerfilView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PerfilView";
             this.Load += new System.EventHandler(this.PerfilView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridPerfil)).EndInit();

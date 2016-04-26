@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pbVoltar = new System.Windows.Forms.Button();
             this.pbCriar = new System.Windows.Forms.Button();
             this.pbEditar = new System.Windows.Forms.Button();
@@ -51,49 +54,69 @@
             // 
             // pbVoltar
             // 
-            this.pbVoltar.Location = new System.Drawing.Point(556, 239);
+            this.pbVoltar.BackColor = System.Drawing.SystemColors.Control;
+            this.pbVoltar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pbVoltar.Location = new System.Drawing.Point(556, 245);
             this.pbVoltar.Name = "pbVoltar";
-            this.pbVoltar.Size = new System.Drawing.Size(101, 23);
+            this.pbVoltar.Size = new System.Drawing.Size(101, 28);
             this.pbVoltar.TabIndex = 9;
             this.pbVoltar.Text = "&Voltar";
-            this.pbVoltar.UseVisualStyleBackColor = true;
+            this.pbVoltar.UseVisualStyleBackColor = false;
             this.pbVoltar.Click += new System.EventHandler(this.pbVoltar_Click);
             // 
             // pbCriar
             // 
-            this.pbCriar.Location = new System.Drawing.Point(449, 239);
+            this.pbCriar.BackColor = System.Drawing.SystemColors.Control;
+            this.pbCriar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pbCriar.Location = new System.Drawing.Point(449, 245);
             this.pbCriar.Name = "pbCriar";
-            this.pbCriar.Size = new System.Drawing.Size(101, 23);
+            this.pbCriar.Size = new System.Drawing.Size(101, 28);
             this.pbCriar.TabIndex = 8;
             this.pbCriar.Text = "&Criar";
-            this.pbCriar.UseVisualStyleBackColor = true;
+            this.pbCriar.UseVisualStyleBackColor = false;
             this.pbCriar.Click += new System.EventHandler(this.pbCriar_Click);
             // 
             // pbEditar
             // 
-            this.pbEditar.Location = new System.Drawing.Point(342, 239);
+            this.pbEditar.BackColor = System.Drawing.SystemColors.Control;
+            this.pbEditar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pbEditar.Location = new System.Drawing.Point(342, 245);
             this.pbEditar.Name = "pbEditar";
-            this.pbEditar.Size = new System.Drawing.Size(101, 23);
+            this.pbEditar.Size = new System.Drawing.Size(101, 28);
             this.pbEditar.TabIndex = 7;
             this.pbEditar.Text = "&Editar";
-            this.pbEditar.UseVisualStyleBackColor = true;
+            this.pbEditar.UseVisualStyleBackColor = false;
             this.pbEditar.Click += new System.EventHandler(this.pbEditar_Click);
             // 
             // pbExcluir
             // 
-            this.pbExcluir.Location = new System.Drawing.Point(235, 239);
+            this.pbExcluir.BackColor = System.Drawing.SystemColors.Control;
+            this.pbExcluir.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pbExcluir.Location = new System.Drawing.Point(235, 245);
             this.pbExcluir.Name = "pbExcluir";
-            this.pbExcluir.Size = new System.Drawing.Size(101, 23);
+            this.pbExcluir.Size = new System.Drawing.Size(101, 28);
             this.pbExcluir.TabIndex = 6;
             this.pbExcluir.Text = "Exclui&r";
-            this.pbExcluir.UseVisualStyleBackColor = true;
+            this.pbExcluir.UseVisualStyleBackColor = false;
             this.pbExcluir.Click += new System.EventHandler(this.pbExcluir_Click);
             // 
             // gridAutor
             // 
             this.gridAutor.AllowUserToAddRows = false;
             this.gridAutor.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(255)))), ((int)(((byte)(249)))));
+            this.gridAutor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gridAutor.AutoGenerateColumns = false;
+            this.gridAutor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridAutor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridAutor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gridAutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridAutor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -104,6 +127,11 @@
             this.gridAutor.Location = new System.Drawing.Point(12, 12);
             this.gridAutor.Name = "gridAutor";
             this.gridAutor.ReadOnly = true;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            this.gridAutor.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.gridAutor.RowTemplate.Height = 30;
             this.gridAutor.Size = new System.Drawing.Size(645, 221);
             this.gridAutor.TabIndex = 5;
             // 
@@ -133,21 +161,21 @@
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // perdidoDataGridViewCheckBoxColumn
             // 
             this.perdidoDataGridViewCheckBoxColumn.DataPropertyName = "perdido";
-            this.perdidoDataGridViewCheckBoxColumn.HeaderText = "perdido";
+            this.perdidoDataGridViewCheckBoxColumn.HeaderText = "Perdido";
             this.perdidoDataGridViewCheckBoxColumn.Name = "perdidoDataGridViewCheckBoxColumn";
             this.perdidoDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // tipo
             // 
             this.tipo.DataPropertyName = "tipo";
-            this.tipo.HeaderText = "tipo";
+            this.tipo.HeaderText = "Tipo";
             this.tipo.Name = "tipo";
             this.tipo.ReadOnly = true;
             this.tipo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -160,18 +188,18 @@
             this.fkLivroDataGridViewTextBoxColumn.DisplayMember = "titulo";
             this.fkLivroDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.fkLivroDataGridViewTextBoxColumn.FillWeight = 300F;
-            this.fkLivroDataGridViewTextBoxColumn.HeaderText = "fkLivro";
+            this.fkLivroDataGridViewTextBoxColumn.HeaderText = "Livro";
             this.fkLivroDataGridViewTextBoxColumn.Name = "fkLivroDataGridViewTextBoxColumn";
             this.fkLivroDataGridViewTextBoxColumn.ReadOnly = true;
             this.fkLivroDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.fkLivroDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.fkLivroDataGridViewTextBoxColumn.ValueMember = "id";
-            this.fkLivroDataGridViewTextBoxColumn.Width = 300;
             // 
             // ExemplarView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(669, 282);
             this.Controls.Add(this.pbVoltar);
             this.Controls.Add(this.pbCriar);
@@ -179,6 +207,7 @@
             this.Controls.Add(this.pbExcluir);
             this.Controls.Add(this.gridAutor);
             this.Name = "ExemplarView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ExemplarView";
             this.Load += new System.EventHandler(this.ExemplarView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridAutor)).EndInit();

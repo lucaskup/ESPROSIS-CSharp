@@ -47,9 +47,15 @@ namespace Biblioteca.View
 
         private void pbExcluir_Click(object sender, EventArgs e)
         {
-            PerfilController c = new PerfilController();
-            c.delete((int)gridPerfil.CurrentRow.Cells[0].Value);
-            atualizaTela();
+
+            DialogResult r = MessageBox.Show("O processo de exclusão é irreversivel, confirma excluir?", " ", MessageBoxButtons.OKCancel);
+            if (r.Equals(DialogResult.OK))
+            {
+                PerfilController c = new PerfilController();
+                c.delete((int)gridPerfil.CurrentRow.Cells[0].Value);
+                atualizaTela();
+            }
+
         }
 
         private void pbVoltar_Click(object sender, EventArgs e)
