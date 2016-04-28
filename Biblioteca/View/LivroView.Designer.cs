@@ -33,9 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridLivros = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fkAutorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.aUTORBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bibliotecaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliotecaDataSet = new Biblioteca.bibliotecaDataSet();
+            this.isbnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lIVROBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aUTORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pbVoltar = new System.Windows.Forms.Button();
@@ -44,10 +48,6 @@
             this.pbExcluir = new System.Windows.Forms.Button();
             this.lIVROTableAdapter = new Biblioteca.bibliotecaDataSetTableAdapters.LIVROTableAdapter();
             this.aUTORTableAdapter = new Biblioteca.bibliotecaDataSetTableAdapters.AUTORTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fkAutorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.isbnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridLivros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTORBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSetBindingSource)).BeginInit();
@@ -67,6 +67,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridLivros.AutoGenerateColumns = false;
             this.gridLivros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridLivros.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.gridLivros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -94,6 +95,35 @@
             this.gridLivros.Size = new System.Drawing.Size(734, 212);
             this.gridLivros.TabIndex = 0;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.FillWeight = 40F;
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.MaxInputLength = 10;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tituloDataGridViewTextBoxColumn
+            // 
+            this.tituloDataGridViewTextBoxColumn.DataPropertyName = "titulo";
+            this.tituloDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.tituloDataGridViewTextBoxColumn.Name = "tituloDataGridViewTextBoxColumn";
+            this.tituloDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fkAutorDataGridViewTextBoxColumn
+            // 
+            this.fkAutorDataGridViewTextBoxColumn.DataPropertyName = "fkAutor";
+            this.fkAutorDataGridViewTextBoxColumn.DataSource = this.aUTORBindingSource1;
+            this.fkAutorDataGridViewTextBoxColumn.DisplayMember = "nome";
+            this.fkAutorDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.fkAutorDataGridViewTextBoxColumn.HeaderText = "Autor";
+            this.fkAutorDataGridViewTextBoxColumn.Name = "fkAutorDataGridViewTextBoxColumn";
+            this.fkAutorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fkAutorDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.fkAutorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.fkAutorDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
             // aUTORBindingSource1
             // 
             this.aUTORBindingSource1.DataMember = "AUTOR";
@@ -108,6 +138,14 @@
             // 
             this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
             this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // isbnDataGridViewTextBoxColumn
+            // 
+            this.isbnDataGridViewTextBoxColumn.DataPropertyName = "isbn";
+            this.isbnDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.isbnDataGridViewTextBoxColumn.HeaderText = "ISBN";
+            this.isbnDataGridViewTextBoxColumn.Name = "isbnDataGridViewTextBoxColumn";
+            this.isbnDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lIVROBindingSource
             // 
@@ -178,43 +216,6 @@
             // aUTORTableAdapter
             // 
             this.aUTORTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.FillWeight = 40F;
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.MaxInputLength = 10;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tituloDataGridViewTextBoxColumn
-            // 
-            this.tituloDataGridViewTextBoxColumn.DataPropertyName = "titulo";
-            this.tituloDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.tituloDataGridViewTextBoxColumn.Name = "tituloDataGridViewTextBoxColumn";
-            this.tituloDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fkAutorDataGridViewTextBoxColumn
-            // 
-            this.fkAutorDataGridViewTextBoxColumn.DataPropertyName = "fkAutor";
-            this.fkAutorDataGridViewTextBoxColumn.DataSource = this.aUTORBindingSource1;
-            this.fkAutorDataGridViewTextBoxColumn.DisplayMember = "nome";
-            this.fkAutorDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.fkAutorDataGridViewTextBoxColumn.HeaderText = "Autor";
-            this.fkAutorDataGridViewTextBoxColumn.Name = "fkAutorDataGridViewTextBoxColumn";
-            this.fkAutorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fkAutorDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.fkAutorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.fkAutorDataGridViewTextBoxColumn.ValueMember = "id";
-            // 
-            // isbnDataGridViewTextBoxColumn
-            // 
-            this.isbnDataGridViewTextBoxColumn.DataPropertyName = "isbn";
-            this.isbnDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.isbnDataGridViewTextBoxColumn.HeaderText = "ISBN";
-            this.isbnDataGridViewTextBoxColumn.Name = "isbnDataGridViewTextBoxColumn";
-            this.isbnDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // LivroView
             // 

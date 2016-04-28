@@ -32,13 +32,17 @@ namespace Biblioteca.Controller
         internal void abonar(int idMulta)
         {
             var multa = getMultaByID(idMulta);
-            multa.abonado = true;
-            persist(multa);
+            if(multa != null)
+            {
+                multa.abonado = true;
+                persist(multa);
+            }
         }
 
         internal void pagar(int idMulta)
         {
-            deletar(idMulta);
+            if(idMulta != 0)
+                deletar(idMulta);
         }
 
         internal void deletar (int id)

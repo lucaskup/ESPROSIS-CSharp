@@ -58,6 +58,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridAutor.AutoGenerateColumns = false;
             this.gridAutor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridAutor.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.gridAutor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;

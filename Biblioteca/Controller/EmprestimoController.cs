@@ -50,7 +50,7 @@ namespace Biblioteca.Controller
             }
             if (exemplarEmprestado(exemplarDigitando))
             {
-                throw new EmprestimoFalhouException("Exemplar emprestado");
+                throw new EmprestimoFalhouException("Exemplar emprestado, empréstimo não pode ser realizado");
             }
             if (possuiReserva(exemplarDigitando, usuario))
             {

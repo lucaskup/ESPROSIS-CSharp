@@ -39,16 +39,16 @@
             this.pbEditar = new System.Windows.Forms.Button();
             this.pbExcluir = new System.Windows.Forms.Button();
             this.gridPerfil = new System.Windows.Forms.DataGridView();
-            this.pERFILBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bibliotecaDataSet = new Biblioteca.bibliotecaDataSet();
-            this.uSUARIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uSUARIOTableAdapter = new Biblioteca.bibliotecaDataSetTableAdapters.USUARIOTableAdapter();
-            this.pERFILTableAdapter = new Biblioteca.bibliotecaDataSetTableAdapters.PERFILTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sobrenomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtNascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fkPerfilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.pERFILBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliotecaDataSet = new Biblioteca.bibliotecaDataSet();
+            this.uSUARIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uSUARIOTableAdapter = new Biblioteca.bibliotecaDataSetTableAdapters.USUARIOTableAdapter();
+            this.pERFILTableAdapter = new Biblioteca.bibliotecaDataSetTableAdapters.PERFILTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.gridPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERFILBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
@@ -118,6 +118,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridPerfil.AutoGenerateColumns = false;
             this.gridPerfil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridPerfil.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.gridPerfil.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -157,29 +158,6 @@
             this.gridPerfil.RowTemplate.Height = 30;
             this.gridPerfil.Size = new System.Drawing.Size(744, 221);
             this.gridPerfil.TabIndex = 10;
-            // 
-            // pERFILBindingSource
-            // 
-            this.pERFILBindingSource.DataMember = "PERFIL";
-            this.pERFILBindingSource.DataSource = this.bibliotecaDataSet;
-            // 
-            // bibliotecaDataSet
-            // 
-            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
-            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // uSUARIOBindingSource
-            // 
-            this.uSUARIOBindingSource.DataMember = "USUARIO";
-            this.uSUARIOBindingSource.DataSource = this.bibliotecaDataSet;
-            // 
-            // uSUARIOTableAdapter
-            // 
-            this.uSUARIOTableAdapter.ClearBeforeFill = true;
-            // 
-            // pERFILTableAdapter
-            // 
-            this.pERFILTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -224,6 +202,29 @@
             this.fkPerfilDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.fkPerfilDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.fkPerfilDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
+            // pERFILBindingSource
+            // 
+            this.pERFILBindingSource.DataMember = "PERFIL";
+            this.pERFILBindingSource.DataSource = this.bibliotecaDataSet;
+            // 
+            // bibliotecaDataSet
+            // 
+            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
+            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // uSUARIOBindingSource
+            // 
+            this.uSUARIOBindingSource.DataMember = "USUARIO";
+            this.uSUARIOBindingSource.DataSource = this.bibliotecaDataSet;
+            // 
+            // uSUARIOTableAdapter
+            // 
+            this.uSUARIOTableAdapter.ClearBeforeFill = true;
+            // 
+            // pERFILTableAdapter
+            // 
+            this.pERFILTableAdapter.ClearBeforeFill = true;
             // 
             // UsuarioView
             // 

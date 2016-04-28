@@ -51,6 +51,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -62,7 +63,7 @@
             this.pbAutor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbAutor.FlatAppearance.BorderSize = 0;
             this.pbAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pbAutor.Location = new System.Drawing.Point(220, 27);
+            this.pbAutor.Location = new System.Drawing.Point(214, 27);
             this.pbAutor.Name = "pbAutor";
             this.pbAutor.Size = new System.Drawing.Size(89, 84);
             this.pbAutor.TabIndex = 0;
@@ -94,7 +95,7 @@
             this.pbExemplar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbExemplar.FlatAppearance.BorderSize = 0;
             this.pbExemplar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pbExemplar.Location = new System.Drawing.Point(118, 27);
+            this.pbExemplar.Location = new System.Drawing.Point(115, 27);
             this.pbExemplar.Name = "pbExemplar";
             this.pbExemplar.Size = new System.Drawing.Size(89, 84);
             this.pbExemplar.TabIndex = 2;
@@ -110,7 +111,7 @@
             this.pbPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbPerfil.FlatAppearance.BorderSize = 0;
             this.pbPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pbPerfil.Location = new System.Drawing.Point(315, 25);
+            this.pbPerfil.Location = new System.Drawing.Point(313, 27);
             this.pbPerfil.Name = "pbPerfil";
             this.pbPerfil.Size = new System.Drawing.Size(89, 84);
             this.pbPerfil.TabIndex = 3;
@@ -126,9 +127,9 @@
             this.pbLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbLogin.FlatAppearance.BorderSize = 0;
             this.pbLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pbLogin.Location = new System.Drawing.Point(12, 12);
+            this.pbLogin.Location = new System.Drawing.Point(16, 25);
             this.pbLogin.Name = "pbLogin";
-            this.pbLogin.Size = new System.Drawing.Size(45, 45);
+            this.pbLogin.Size = new System.Drawing.Size(89, 84);
             this.pbLogin.TabIndex = 5;
             this.toolTip1.SetToolTip(this.pbLogin, "Login");
             this.pbLogin.UseVisualStyleBackColor = true;
@@ -140,7 +141,7 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(63, 32);
+            this.lblUsuario.Location = new System.Drawing.Point(12, 28);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(135, 22);
             this.lblUsuario.TabIndex = 6;
@@ -152,7 +153,7 @@
             this.pbDevolucao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbDevolucao.FlatAppearance.BorderSize = 0;
             this.pbDevolucao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pbDevolucao.Location = new System.Drawing.Point(118, 25);
+            this.pbDevolucao.Location = new System.Drawing.Point(214, 25);
             this.pbDevolucao.Name = "pbDevolucao";
             this.pbDevolucao.Size = new System.Drawing.Size(89, 84);
             this.pbDevolucao.TabIndex = 8;
@@ -168,7 +169,7 @@
             this.pbMulta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbMulta.FlatAppearance.BorderSize = 0;
             this.pbMulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pbMulta.Location = new System.Drawing.Point(220, 25);
+            this.pbMulta.Location = new System.Drawing.Point(313, 25);
             this.pbMulta.Name = "pbMulta";
             this.pbMulta.Size = new System.Drawing.Size(89, 84);
             this.pbMulta.TabIndex = 9;
@@ -184,7 +185,7 @@
             this.pbUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbUsuario.FlatAppearance.BorderSize = 0;
             this.pbUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pbUsuario.Location = new System.Drawing.Point(315, 25);
+            this.pbUsuario.Location = new System.Drawing.Point(412, 27);
             this.pbUsuario.Name = "pbUsuario";
             this.pbUsuario.Size = new System.Drawing.Size(89, 84);
             this.pbUsuario.TabIndex = 4;
@@ -200,7 +201,7 @@
             this.pbEmprestimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbEmprestimo.FlatAppearance.BorderSize = 0;
             this.pbEmprestimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pbEmprestimo.Location = new System.Drawing.Point(16, 25);
+            this.pbEmprestimo.Location = new System.Drawing.Point(115, 25);
             this.pbEmprestimo.Name = "pbEmprestimo";
             this.pbEmprestimo.Size = new System.Drawing.Size(89, 84);
             this.pbEmprestimo.TabIndex = 7;
@@ -213,12 +214,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
-            this.panel1.Controls.Add(this.pbLogin);
             this.panel1.Controls.Add(this.lblUsuario);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(457, 76);
+            this.panel1.Size = new System.Drawing.Size(543, 76);
             this.panel1.TabIndex = 10;
             // 
             // label1
@@ -226,7 +226,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.label1.Location = new System.Drawing.Point(13, 122);
+            this.label1.Location = new System.Drawing.Point(112, 122);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 22);
@@ -238,7 +238,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.label2.Location = new System.Drawing.Point(120, 122);
+            this.label2.Location = new System.Drawing.Point(216, 122);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 22);
@@ -250,7 +250,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.label3.Location = new System.Drawing.Point(241, 122);
+            this.label3.Location = new System.Drawing.Point(334, 122);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 22);
@@ -262,18 +262,18 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.label4.Location = new System.Drawing.Point(335, 122);
+            this.label4.Location = new System.Drawing.Point(425, 119);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 22);
+            this.label4.Size = new System.Drawing.Size(62, 22);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Perfil";
+            this.label4.Text = "Usuário";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.pbLogin);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.pbPerfil);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pbEmprestimo);
@@ -282,15 +282,17 @@
             this.groupBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(14, 92);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(426, 159);
+            this.groupBox1.Size = new System.Drawing.Size(513, 159);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ações";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.pbPerfil);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.pbAutor);
             this.groupBox2.Controls.Add(this.pbExemplar);
@@ -300,7 +302,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(14, 265);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(426, 159);
+            this.groupBox2.Size = new System.Drawing.Size(513, 159);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cadastros";
@@ -310,19 +312,19 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.label5.Location = new System.Drawing.Point(328, 119);
+            this.label5.Location = new System.Drawing.Point(333, 119);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 22);
+            this.label5.Size = new System.Drawing.Size(49, 22);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Usuário";
+            this.label5.Text = "Perfil";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.label6.Location = new System.Drawing.Point(240, 119);
+            this.label6.Location = new System.Drawing.Point(234, 119);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 22);
@@ -334,7 +336,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.label7.Location = new System.Drawing.Point(124, 119);
+            this.label7.Location = new System.Drawing.Point(121, 119);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 22);
@@ -354,12 +356,24 @@
             this.label8.Text = "Livro";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
+            this.label9.Location = new System.Drawing.Point(36, 122);
+            this.label9.Margin = new System.Windows.Forms.Padding(0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 22);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Login";
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(454, 444);
+            this.ClientSize = new System.Drawing.Size(540, 444);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
@@ -400,5 +414,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

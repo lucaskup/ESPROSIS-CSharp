@@ -36,13 +36,13 @@ namespace Biblioteca.View
                 foreach (var em in lista)
                 {
                     MultaGrid multa = new MultaGrid();
-                    multa.id = em.MULTA.id;
-                    multa.nome = em.USUARIO.nome;
-                    multa.titulo = em.EXEMPLAR.LIVRO.titulo;
-                    multa.observacao = em.MULTA.observacao;
-                    multa.valor = em.MULTA.valor;
-                    multa.dtPrazo = em.MULTA.vencimento.Value;
-                    multa.abonado = em.MULTA.abonado;
+                    multa.ID = em.MULTA.id;
+                    multa.Nome = em.USUARIO.nome;
+                    multa.Titulo = em.EXEMPLAR.LIVRO.titulo;
+                    multa.Observacao = em.MULTA.observacao;
+                    multa.Valor = em.MULTA.valor;
+                    multa.Prazo = em.MULTA.vencimento.Value;
+                    multa.Abonado = em.MULTA.abonado;
                     listaMultas.Add(multa);
                 }
             }
@@ -52,18 +52,20 @@ namespace Biblioteca.View
 
         private struct MultaGrid
         {
-            public int id { get; set; }
-            public DateTime dtPrazo { get; set; }
-            public decimal valor { get; set; }
-            public String nome { get; set; }
-            public String titulo { get; set; }
-            public bool abonado { get; set; }
-            public String observacao { get; set; }
+            public int ID { get; set; }
+            public DateTime Prazo { get; set; }
+            public decimal Valor { get; set; }
+            public string Nome { get; set; }
+            public string Titulo { get; set; }
+            public bool Abonado { get; set; }
+            public string Observacao { get; set; }
         }
 
         private int getIDSelecionado()
         {
-            return (int)gridMulta.CurrentRow.Cells[0].Value;
+            if(gridMulta.CurrentRow!=null)
+                return (int)gridMulta.CurrentRow.Cells[0].Value;
+            return 0;
         }
 
         private void pbAbonar_Click(object sender, EventArgs e)
@@ -81,9 +83,13 @@ namespace Biblioteca.View
         private void pbObservacao_Click(object sender, EventArgs e)
         {
             var m = c.getMultaByID(getIDSelecionado());
-            MultaObservacaoView vw = new MultaObservacaoView(m.id, m.observacao);
-            vw.ShowDialog();
-            atualizaTela();
+            if(m != null)
+            {
+                MultaObservacaoView vw = new MultaObservacaoView(m.id, m.observacao);
+                vw.ShowDialog();
+                atualizaTela();
+            }
+            
         }
     }
 }
