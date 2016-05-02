@@ -70,6 +70,14 @@
     <Compile Include="TipoExemplar.cs">
       <DependentUpon>BibliotecaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="util\importacao\ImportacaoDados.cs" />
+    <Compile Include="util\importacao\TiposImportacao.cs" />
+    <Compile Include="util\importacao\ViewImportar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="util\importacao\ViewImportar.Designer.cs">
+      <DependentUpon>ViewImportar.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AutorView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +217,9 @@
     <Compile Include="View\UsuarioViewEditar.Designer.cs">
       <DependentUpon>UsuarioViewEditar.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="util\importacao\ViewImportar.resx">
+      <DependentUpon>ViewImportar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AutorView.resx">
       <DependentUpon>AutorView.cs</DependentUpon>
     </EmbeddedResource>
