@@ -37,11 +37,10 @@ namespace Biblioteca.View
                 {
                     MultaGrid multa = new MultaGrid();
                     multa.ID = em.MULTA.id;
-                    multa.Nome = em.USUARIO.nome;
-                    multa.Titulo = em.EXEMPLAR.LIVRO.titulo;
+                    multa.Nome = em.USUARIO.nome.Trim()+" "+em.USUARIO.sobrenome.Trim();
                     multa.Observacao = em.MULTA.observacao;
                     multa.Valor = em.MULTA.valor;
-                    multa.Prazo = em.MULTA.vencimento.Value;
+                    multa.Vencimento = em.MULTA.vencimento.Value;
                     multa.Abonado = em.MULTA.abonado;
                     listaMultas.Add(multa);
                 }
@@ -53,10 +52,9 @@ namespace Biblioteca.View
         private struct MultaGrid
         {
             public int ID { get; set; }
-            public DateTime Prazo { get; set; }
+            public DateTime Vencimento { get; set; }
             public decimal Valor { get; set; }
             public string Nome { get; set; }
-            public string Titulo { get; set; }
             public bool Abonado { get; set; }
             public string Observacao { get; set; }
         }
@@ -91,5 +89,7 @@ namespace Biblioteca.View
             }
             
         }
+
+
     }
 }
